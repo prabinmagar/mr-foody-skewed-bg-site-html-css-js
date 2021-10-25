@@ -1,0 +1,165 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+
+/* variables */
+:root{
+    --grey-color: #ddd;
+    --dark-color: #4d4d4d;
+    --white-color: #fff;
+    --red-color: #ff6c65;
+    --transition: all 200ms linear;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-decoration: none;
+    outline: 0;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-size: 1.6rem;
+    color: var(--dark-color);
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    color: var(--dark-color);
+}
+ul{
+    list-style-type: none;
+}
+.flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.flex-sb{
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.grid{
+    display: grid;
+    -webkit-column-gap: 3rem;
+       -moz-column-gap: 3rem;
+            column-gap: 3rem;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+button, .button{
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.button{
+    border: 3px solid var(--grey-color)!important;
+    color: var(--dark-color);
+    margin-top: 2rem;
+    padding: .9rem 2.3rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+}
+.button:hover{
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    border-color: var(--dark-color)!important;
+}
+
+h1, h2, h3{
+    letter-spacing: 1px;
+    margin-top: 0;
+}
+.py-5{
+    padding: 5rem 0;
+}
+
+.slanted-bg{
+    height: 500px;
+    position: relative;
+    overflow: visible;
+    color: var(--white-color);
+}
+.slanted-bg::before, .slanted-bg::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url('../images/bg-1.jpg') center/cover no-repeat fixed;
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/bg-1.jpg') center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/bg-1.jpg') center/cover no-repeat fixed;
+    top: 0;
+    -webkit-transform: skewY(-3deg);
+        -ms-transform: skewY(-3deg);
+            transform: skewY(-3deg);
+    z-index: -1;
+}
+.slanted-bg .container{
+    width: 330px;
+    height: 330px;
+    text-align: center;
+    border: 5px solid var(--white-color);
+    border-radius: 50%;
+    position: relative;
+}
+.slanted-bg .container::before, .slanted-bg .container::after{
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 300px;
+    -webkit-transform: skewY(-3deg);
+        -ms-transform: skewY(-3deg);
+            transform: skewY(-3deg);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url('../images/bg-1.jpg') center/cover no-repeat fixed;
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/bg-1.jpg') center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/bg-1.jpg') center/cover no-repeat fixed;
+}
+.slanted-bg .container::before{
+    top: -6px;
+}
+.slanted-bg .container::after{
+    bottom: -6px;
+}
+.slanted-bg h2{
+    text-transform: capitalize;
+    font-size: 3.2rem;
+    font-weight: 500;
+    padding: 0 2rem;
+    line-height: 1.3;
+    font-family: 'Raleway', sans-serif;
+}
+.svg{
+    position: absolute;
+    bottom: -1px;
+    -webkit-transform: rotate(-3deg);
+        -ms-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+}
+.text{
+    opacity: 0.9;
+    font-weight: 300;
+    max-width: 500px;
+}
+img{
+    width: 100%;
+    display: block;
+}
